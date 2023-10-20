@@ -732,3 +732,86 @@ img.category-game__img {
     }
 }
 
+/* ******************************************* */
+
+@media screen and (max-width:550px) {
+    .favorite-games__item:nth-child(1) {
+        border-radius: 35px;
+        border-bottom-left-radius: 126px;
+    }
+    
+    .favorite-games__items {
+        justify-content: center;
+    }
+
+    .favorite-games__item:nth-child(1) img{
+        width: 400px;
+    }
+
+    .town-game__tabs {
+        max-width: 100%;
+    }
+
+    .town-game__item {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .about-img {
+        max-width: min-content;
+    }
+
+    .about-img img{
+        width: 90px;
+    }
+
+    .about-img-flower {
+        top: 20px;
+        left: 30%;
+        transform: translate(-30%);
+    }
+
+    .about-img-fire {
+        left: 80%;
+        transform: translate(-80%);
+    }
+
+    .about-img-rhomb {
+        top: 145px;
+        left: 225px;
+    }
+
+    .about-img-arrow {
+        top: 145px;
+        left: 75px;
+    }
+
+    .about-img > p {
+        font-size: 12px;
+        width: max-content;
+    }
+
+    .about-img-fire p {
+        top: 70px;
+        left: 47px;
+    }
+    
+    .about-img-arrow img{
+        width: 135px;
+    }
+
+    .about-img-arrow > p {
+        top: 24px;
+        left: 6px;
+    }
+
+    .form {
+        margin-top: 120px;
+    }
+    
+    .about-us__description > img{
+        width: 100%;
+    }
+}
+
+
