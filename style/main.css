@@ -56,7 +56,7 @@ p{
 
 .section-title {
     margin-bottom: 25px;
-    font-size: 34px;
+    font-size: 48px;
     text-transform: uppercase;
 }
 
@@ -92,9 +92,9 @@ nav > ul,
 }
 
 .header__title {
-    max-width: 460px;
+    max-width: 640px;
     text-align: center;
-    font-size: 36px;
+    font-size: 50px;
     text-transform: uppercase;
 }
 
@@ -229,6 +229,10 @@ img.category-game__img {
     position: relative;
 }
 
+.bingo-bongo__item img.item-img {
+    max-width: 165px;
+}
+
 
 .item-text {
     position: absolute;
@@ -261,7 +265,7 @@ img.category-game__img {
 
 .favorite-games__title {
     margin: 0;
-    max-width: 305px;
+    max-width: 470px;
 }
 
 .favorite-games__items {
@@ -310,8 +314,10 @@ img.category-game__img {
     position: relative;
 }
 
+
 .sale-games__title {
     width: min-content;
+    margin-bottom: 20px;
 }
 
 /* .sale-games > img {
@@ -345,7 +351,7 @@ img.category-game__img {
 
 .sale-games__text {
     max-width: 400px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .town-game {
@@ -378,10 +384,16 @@ img.category-game__img {
     border-radius: 15px;
     cursor: pointer;
     text-align: center;
+    border: none;
 }
 
-.town-game__item.active {
+/* .town-game__item.active {
     background-color: #f5d961;
+} */
+
+.town-game__item:focus {
+    background-color: #f5d961;
+    outline: none;
 }
 
 .card-description__text:not(:last-child) {
@@ -405,6 +417,10 @@ img.category-game__img {
 .town-game__title,
 .game_libraries__title {
     margin-bottom: 10px;
+}
+
+.form {
+    max-width: max-content;
 }
 
 .town-game__text {
@@ -593,6 +609,83 @@ img.category-game__img {
     width: 100%;
 }
 
+
+/* custom input(type=radio)*/
+input[type="radio"]{
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 1px solid rgb(59, 59, 59);
+    border-radius: 100%;
+}
+
+input[type="radio"]::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 100%;
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2.5px solid black;
+    border-radius: 100%;
+}
+
+
+/* custom input(type=checbox)*/
+
+input[type="checkbox"]{
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 1px solid rgb(104, 103, 103);
+    overflow: hidden;
+}
+
+input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: inherit;
+}
+
+input[type="checkbox"]:checked::before {
+    content: url("../img/check.svg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding-bottom: 16px;
+    padding-left: 1px;
+}
+
+
 @media screen and (max-width:2350px) {
     .sale-games__img-heart {
         left: 230px;
@@ -611,10 +704,16 @@ img.category-game__img {
     }
 }   
 
+@media screen and (max-width:1850px){
+    .favorite-games__wrapper {
+        gap: 65px;
+    }
+}
+
 
 @media screen and (max-width:1600px) {
     .sale-games__img-heart {
-        left: 52px;
+        left: 100px;
     }
     .container {
     max-width: 80%;
@@ -629,15 +728,24 @@ img.category-game__img {
         justify-content: center;
         flex-wrap: wrap;
     }
+
+    .bingo-bongo__items {
+        gap: 65px;
+    }
+
+    .sale-games__wrapper {
+        padding-left: 50px;
+    }
+    
 }   
 
 @media screen and (max-width:1400px) {
     .sale-games__img-heart {
-        left: 18px;
+        left: 80px;
     }
 
     .favorite-games__wrapper {
-        gap: 90px;  
+        gap: 40px;  
     }
 
     .footer {
