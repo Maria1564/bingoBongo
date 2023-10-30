@@ -1,15 +1,15 @@
 @font-face {
-    font-weight: 500; 
+    font-weight: 500;
     font-family: Rubik;
     src: url("../fonts/Rubik-Medium.ttf");
 }
-  
+
 @font-face {
-    font-weight: 700; 
+    font-weight: 700;
     font-family: Rubik;
     src: url("../fonts/Rubik-Bold.ttf");
 }
-  
+
 @font-face {
     font-weight: 300;
     font-family: Rubik;
@@ -60,11 +60,27 @@ p{
     text-transform: uppercase;
 }
 
+main, header {
+    overflow: hidden;
+}
+
 header {
-    background-color: #e8e7df;
+    position: relative;
+    background: linear-gradient(#dbdbd2, white);
     padding: 20px 0 60px;
     position: relative;
     z-index: -2;
+}
+
+header::before {
+    position: absolute;
+    content: "";
+    width: 200%;
+    height: 270px;
+    background: url("../img/полукруг_светлый.svg");
+    top: 0;
+    left: -68px;
+    z-index: -3;
 }
 
 .header-up {
@@ -128,11 +144,9 @@ nav > ul,
 .flower-main {
     position: absolute;
     right: 0;
-    top: 80px;
+    top: 135px;
     z-index: -1;
-
 }
-
 
 .about-us {
     margin-top: 110px;
@@ -215,7 +229,7 @@ img.category-game__img {
 .bingo-bongo__text {
     max-width: 405px;
     text-align: center;
-}   
+}
 
 .bingo-bongo__items {
     display: flex;
@@ -275,7 +289,7 @@ img.category-game__img {
     justify-content: space-between;
     width: min-content;
     gap: 25px;
-   
+
 }
 
 .favorite-games__item  {
@@ -431,7 +445,7 @@ img.category-game__img {
     margin: 25px 0;
     display: flex;
     gap: 45px;
-    
+
 }
 
 .town-game__parametr {
@@ -446,11 +460,6 @@ img.category-game__img {
 
 .town-game__price {
     font-size: 24px;
-}
-
-.section.game-libraries {
-    background-color: #f0f0eb;
-    padding: 90px 0 120px;
 }
 
 .game_libraries__wrapper {
@@ -550,7 +559,7 @@ img.category-game__img {
 
 .game-levels__inputs > input:not(:first-child) {
     margin-left: 15px;
- 
+
 }
 
 .game-levels__inputs > input {
@@ -594,10 +603,21 @@ img.category-game__img {
 }
 
 .game-libraries {
+    position: relative;
     background-color: #f0f0eb;
     padding: 90px 0 120px;
+    margin-top: 155px;
 }
 
+.game-libraries::before {
+    position: absolute;
+    content: "";
+    width: 200%;
+    height: 270px;
+    background: url("../img/полукруг.svg");
+    top: -236px;
+    left: -68px;
+}
 .btn-up {
     position: fixed;
     width: max-content;
@@ -696,13 +716,13 @@ input[type="checkbox"]:checked::before {
     .sale-games__img-heart {
         left: 195px;
     }
-}   
+}
 
 @media screen and (max-width:1910px) {
     .sale-games__img-heart {
         left: 145px;
     }
-}   
+}
 
 @media screen and (max-width:1850px){
     .favorite-games__wrapper {
@@ -736,8 +756,8 @@ input[type="checkbox"]:checked::before {
     .sale-games__wrapper {
         padding-left: 50px;
     }
-    
-}   
+
+}
 
 @media screen and (max-width:1400px) {
     .sale-games__img-heart {
@@ -745,7 +765,7 @@ input[type="checkbox"]:checked::before {
     }
 
     .favorite-games__wrapper {
-        gap: 40px;  
+        gap: 40px;
     }
 
     .footer {
@@ -761,13 +781,13 @@ input[type="checkbox"]:checked::before {
     .about-us__wrapper {
         justify-content: center;
     }
-}  
+}
 
 @media screen and (max-width:1270px) {
     .town-game__tabs {
         padding: 2px;
     }
-}  
+}
 
 
 @media screen and (max-width:1140px) {
@@ -787,7 +807,7 @@ input[type="checkbox"]:checked::before {
     }
 
     .categoties-games {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: center;
     }
 
@@ -797,13 +817,13 @@ input[type="checkbox"]:checked::before {
 
     .game_libraries__wrapper {
         grid-template-columns: 1fr;
-    }   
+    }
 
     .form {
         margin: 0 auto;
         margin-top: 200px;
     }
-    
+
     .town-game__wrapper {
         grid-template-columns: 1fr;
         gap: 80px;
@@ -812,7 +832,7 @@ input[type="checkbox"]:checked::before {
     .town-game__tabs {
         width: max-content;
     }
-    
+
     .col-2 {
         margin: 0 auto;
         display: flex;
@@ -823,7 +843,7 @@ input[type="checkbox"]:checked::before {
     .footer {
         padding: 40px 0;
     }
-}  
+}
 
 
 @media screen and (max-width:960px) {
@@ -840,14 +860,12 @@ input[type="checkbox"]:checked::before {
     }
 }
 
-/* ******************************************* */
-
 @media screen and (max-width:550px) {
     .favorite-games__item:nth-child(1) {
         border-radius: 35px;
         border-bottom-left-radius: 126px;
     }
-    
+
     .favorite-games__items {
         justify-content: center;
     }
@@ -903,7 +921,7 @@ input[type="checkbox"]:checked::before {
         top: 70px;
         left: 47px;
     }
-    
+
     .about-img-arrow img{
         width: 135px;
     }
@@ -916,10 +934,8 @@ input[type="checkbox"]:checked::before {
     .form {
         margin-top: 120px;
     }
-    
+
     .about-us__description > img{
         width: 100%;
     }
 }
-
-
